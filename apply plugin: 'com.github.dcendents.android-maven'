@@ -1,0 +1,42 @@
+apply plugin: 'com.github.dcendents.android-maven'
+
+group = pingtank-android-sdk                               // Maven Group ID for the artifact
+
+install {
+    repositories.mavenInstaller {
+        // This generates POM.xml with proper parameters
+        pom {
+            project {
+                packaging 'aar'
+                groupId publishedGroupId
+                artifactId artifact
+
+                // Add your description here
+                name PingTank
+                description A pingtank library for android to create animations from videos and images
+                url https://piglab.pingtank.com/mo/PingTank-Lakers
+
+                // Set your license
+                licenses {
+                    license {
+                        name The Apache Software License, Version 2.0
+                        url http://www.apache.org/licenses/LICENSE-2.0.txt
+                    }
+                }
+                developers {
+                    developer {
+                        id momo
+                        name mo
+                        email mo@pingtank.com
+                    }
+                }
+                scm {
+                    connection https://piglab.pingtank.com/mo/PingTank-Lakers.git
+                    developerConnection https://piglab.pingtank.com/mo/PingTank-Lakers.git
+                    url https://piglab.pingtank.com/mo/PingTank-Lakers.git
+
+                }
+            }
+        }
+    }
+}
